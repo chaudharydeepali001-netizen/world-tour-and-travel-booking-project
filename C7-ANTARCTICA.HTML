@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta-name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANTARCTICA</title>
+
+    <style>
+
+        /* ---------- BACKGROUND ---------- */
+        body {
+            background-image:image-set("images/antarctica map1.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+
+        /* ---------- FLOATING HEADER ---------- */
+        .header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 15px 0;
+            background: rgba(0, 0, 0, 0.45);
+            backdrop-filter: blur(6px);
+            text-align: center;
+            z-index: 100;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 45px;
+            color: #e6f7ff;
+            text-shadow: 0 0 12px cyan, 0 0 25px #00e5ff;
+            animation: glow 2s infinite alternate;
+        }
+
+        @keyframes glow {
+            from { text-shadow: 0 0 10px cyan; }
+            to { text-shadow: 0 0 25px cyan; }
+        }
+
+        main { margin-top: 120px; }
+
+        /* ---------- GLASS CARD FOR HOME + MAP ---------- */
+        .nav {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        .card {
+            width: 320px;
+            padding: 15px;
+            border-radius: 15px;
+            border: 1px solid rgba(255,255,255,0.4);
+            background: rgba(194, 39, 155, 0.15);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 0 18px rgba(64, 211, 45, 0.4);
+            text-align: center;
+        }
+
+        .card h2 a {
+            text-decoration: none;
+            color: #eaffff;
+            margin: 0 15px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .card h2 a:hover {
+            color: cyan;
+            text-shadow: 0 0 10px cyan;
+        }
+
+        /* ---------- REGION BUTTONS ---------- */
+        .links-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 25px;
+            margin-top: 55px;
+            padding-bottom: 60px;
+        }
+
+        .link-btn {
+            width: 90%;
+            max-width: 650px;
+            padding: 15px;
+            text-align: center;
+            background: rgba(0,0,0,0.55);
+            border-radius: 12px;
+            border: 2px solid rgba(255,255,255,0.3);
+            box-shadow: 0 0 15px rgba(0,255,255,0.4);
+            backdrop-filter: blur(5px);
+            transition: 0.3s;
+            font-size: 26px;
+        }
+
+        .link-btn:hover {
+            transform: scale(1.05);
+            background: rgba(0, 153, 255, 0.7);
+            box-shadow: 0 0 25px cyan;
+        }
+
+        .link-btn a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        /* ---------- ICON STYLE ---------- */
+        .icon {
+            margin-right: 10px;
+        }
+
+        @media (max-width: 600px) {
+            .header h1 { font-size: 32px; }
+            .link-btn { font-size: 20px; }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <div class="header">
+        <h1>"ANTARCTICA"</h1>
+    </div>
+
+    <main>
+
+        <!-- HOME + WORLD MAP -->
+        <div class="nav">
+            <div class="card">
+                <h2>
+                    <a href="homepage.html">| HOME |</a>
+                    <a href="continent-map.html">| WORLD MAP |</a>
+                </h2>
+            </div>
+        </div>
+
+        <!-- REGION LINKS WITH ICONS -->
+        <div class="links-container">
+
+            <div class="link-btn">
+                <a href="ANTARCTICA1-QUEEN MAUD LAND.HTML">
+                    ❄ QUEEN MAUD LAND
+                </a>
+            </div>
+
+            <div class="link-btn">
+                <a href="ANTARCTICA2-WEDDELL SEA.HTML">
+                    🌊 WEDDELL SEA
+                </a>
+            </div>
+
+            <div class="link-btn">
+                <a href="ANTARCTICA3-ANTARCTIC PENINSULA.HTML">
+                    🧭 ANTARCTIC PENINSULA
+                </a>
+            </div>
+
+            <div class="link-btn">
+                <a href="ANTARCTICA5-WILKES LAND.HTML">
+                    🧊 WILKES LAND
+                </a>
+            </div>
+
+            <div class="link-btn">
+                <a href="ANTARCTICA4-ROSS ICE SHELF.HTML">
+                    🧊 ROSS ICE SHELF
+                </a>
+            </div>
+
+        </div>
+
+    </main>
+</body>
+</html>

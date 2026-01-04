@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEDDELL SEA</title>
+
+<style>
+/* ---------- BACKGROUND GRADIENT ---------- */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(120deg, #c0e9ff, #e0faff, #dfffd9);
+    background-size: 400% 400%;
+    animation: gradientMove 12s ease infinite;
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* PAGE WIDTH CONTROL */
+main {
+    width: 95%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* NAV BAR */
+.nav-box {
+    width: 100%;
+    background: rgba(0, 180, 120, 0.85);
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+    backdrop-filter: blur(5px);
+    animation: fadeIn 1.5s ease;
+}
+.nav-box a {
+    text-decoration: none;
+    color: rgb(19, 42, 218);
+    font-weight: bold;
+    padding: 0 10px;
+    font-size: 17px;
+}
+.nav-box a:hover {
+    color: rgb(255, 255, 255);
+}
+
+/* MAIN IMAGE */
+.main-img {
+    width: 100%;
+    max-width: 750px;
+    height: auto;
+    border-radius: 6px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.3);
+    transition: transform 0.4s ease;
+}
+.main-img:hover {
+    transform: scale(1.04);
+}
+
+/* CONTENT BOX */
+.content-box {
+    background: rgba(255, 255, 255, 0.85);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+    line-height: 1.6;
+    font-size: 17px;
+    white-space: pre-wrap;
+    animation: slideUp 1.3s ease;
+}
+
+/* IMAGE + VIDEO GRID */
+.img-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 22px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.img-grid img,
+.img-grid video {
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.3);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* HOVER ZOOM EFFECT */
+.img-grid img:hover,
+.img-grid video:hover {
+    transform: scale(1.06);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+/* FOOTER */
+.footer {
+    text-align: center;
+    margin-top: 30px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+    animation: fadeIn 2s ease;
+}
+
+/* ANIMATION KEYFRAMES */
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes slideUp {
+    from {transform: translateY(50px); opacity: 0;}
+    to {transform: translateY(0); opacity: 1;}
+}
+
+/* RESPONSIVE */
+@media(max-width: 600px) {
+    .nav-box {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
+</style>
+</head>
+
+
+<body>
+<main>
+
+<hr>
+<h2 style="text-align: center; text-decoration: underline;">"ANTARCTICA- WEDDELL SEA"</h2>
+<hr>
+
+<div class="nav-box">
+    <a href="homepage.html">HOME</a> || 
+    <a href="continent-map.html">WORLD MAP</a> || 
+    <a href="C7-ANTARCTICA.HTML">ANTARCTICA MAP</a>
+</div>
+
+<br><hr><br>
+
+<!-- MAIN MAP IMAGE -->
+<div style="text-align:center;">
+    <img src="images/WEDDELL SEA MAP.jpg" class="main-img" alt="WEDDELL SEA MAP">
+</div>
+
+<hr>
+
+<h1 style="text-align:center; color:rgba(66, 7, 90, 0.833); text-decoration: underline;"><b><i> 🌊 Weddell Sea 🌴☀ </i></b></h1>
+
+<!-- CONTENT BOX -->
+<div class="content-box">
+📍 Location
+
+The Weddell Sea is part of the Southern Ocean, on the coast of Antarctica.
+
+It lies east of the Antarctic Peninsula.
+
+❄ Features
+
+One of the coldest seas on Earth – temperatures can be close to freezing all year.
+
+Known for thick sea ice and massive ice shelves.
+
+The famous Weddell Gyre, a huge circular water current, circulates here.
+
+Very clear water – some of the clearest on the planet.
+
+Home to the Weddell Seal, one of Antarctica’s iconic animals.
+
+🧊 Why It's Important
+Plays a big role in global climate by producing very cold, dense water that spreads across the oceans.
+Supports unique wildlife such as:
+Weddell seals
+Emperor penguins
+Killer whales
+
+🧭 Exploration Highlights
+Named after British sailor James Weddell (1823).
+Ernest Shackleton’s ship Endurance sank here after getting trapped in ice (1915).
+
+🌍 Best Time to Visit 
+November to February (Antarctic summer)
+Sea ice is lower
+More daylight
+Temperature is slightly less extreme 😊🌍
+</div>
+
+
+<!-- IMAGE + VIDEO GRID -->
+<div class="img-grid">
+    <img src="images/WEDDELL SEA PIC1.jpg">
+    <img src="images/WEDDELL PIC3.jpg">
+    <video src="images/WEDDEL VIDEO1.mp4" controls></video>
+    <img src="images/WEDDELL PIC2.jpg">
+    <img src="images/WEDDELL PICV4.jpg">
+</div>
+
+
+<!-- FOOTER -->
+<div class="footer">
+    <h2><b>Thank You For Visiting Our Travel Guide!</b></h2>
+    <p><b>We hope this guide has inspired you to explore the beautiful destinations of WEDDELL SEA.  
+    Safe travels!</b></p>
+</div>
+<hr>
+</main>
+</body>
+</html>

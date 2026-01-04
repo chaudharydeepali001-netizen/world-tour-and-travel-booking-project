@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROSS ICE SHELF</title>
+    <style>
+        /* ---------- BODY & BACKGROUND ---------- */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #cceeff, #ffffff);
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* ---------- SNOW/ICE FALL ANIMATION ---------- */
+        .snowflake {
+            position: fixed;
+            top: -10px;
+            color: #ffffff;
+            font-size: 10px;
+            z-index: 9999;
+            user-select: none;
+            pointer-events: none;
+            animation-name: fall;
+            animation-duration: 10s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes fall {
+            0% { transform: translateY(0) translateX(0); opacity: 1; }
+            100% { transform: translateY(100vh) translateX(50px); opacity: 0.8; }
+        }
+
+        /* ---------- MAIN CONTENT ---------- */
+        main {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        h2, h1 {
+            text-align: center;
+        }
+
+        h2 {
+            text-decoration: underline;
+        }
+
+        /* ---------- NAVIGATION ---------- */
+        .nav-links {
+            width: 100%;
+            max-width: 500px;
+            margin: 20px auto;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+            background: #09e281;
+            border: 1px solid rgba(0,0,0,0.08);
+            text-align: center;
+            color: rgb(19, 42, 218);
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 10px;
+            color: rgb(19, 42, 218);
+        }
+
+        .nav-links a:hover {
+            color: #ff5733;
+        }
+
+        /* ---------- TEXT CONTENT ---------- */
+        pre, p {
+            max-width: 900px;
+            margin: auto;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 15px;
+            border-radius: 10px;
+            overflow-x: auto;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        /* ---------- IMAGES ---------- */
+        img.center {
+            display: block;
+            margin: 20px auto;
+            border-radius: 10px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+        }
+
+        pre img {
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+        }
+
+        video {
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+        }
+
+        /* ---------- FOOTER ---------- */
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        /* ---------- RESPONSIVE DESIGN ---------- */
+        @media (max-width: 768px) {
+            pre, .nav-links {
+                width: 90%;
+                padding: 10px;
+            }
+            pre img, video {
+                width: 100% !important;
+                height: auto !important;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1, h2 {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Snowflakes -->
+    <script>
+        for(let i=0; i<100; i++){
+            let snow = document.createElement('div');
+            snow.classList.add('snowflake');
+            snow.style.left = Math.random() * window.innerWidth + 'px';
+            snow.style.animationDuration = 5 + Math.random()*10 + 's';
+            snow.style.fontSize = 10 + Math.random()*10 + 'px';
+            snow.innerHTML = '❄';
+            document.body.appendChild(snow);
+        }
+    </script>
+
+    <main>
+        <hr>
+        <h2>"ANTARCTICA- ROSS ICE SHELF"</h2>
+        <hr>
+        <div class="nav-links">
+            <a href="homepage.html">HOME</a> || 
+            <a href="continent-map.html">WORLD MAP</a> || 
+            <a href="C7-ANTARCTICA.HTML">ANTARCTICA MAP</a>
+        </div>
+        <hr>
+        <img src="images/ROSS ICE MAP.jpg" alt="ROSS ICE MAP" class="center" width="400" height="500">
+        <hr>
+        <h1 style="color:rgba(66, 7, 90, 0.833);"><b><i>❄ ROSS ICE SHELF ❄ 🌴☀ :</i></b></h1>
+        <pre>
+🧭 The Ross Ice Shelf is the largest ice shelf in Antarctica. 
+It is like a giant floating platform of ice attached to the Antarctic continent. 
+Scientists call it a “floating glacier extension.”
+
+📍 Location
+Found in the Ross Sea region of Antarctica
+Lies on the southern side of the Antarctic Peninsula
+Covers a huge area—almost the size of France!
+
+📏 Size & Features
+Area: Around 500,000 sq km (very massive!)
+Thickness: Can be hundreds of meters thick
+Edge: The front edge forms a high ice cliff—up to 30 meters above the water
+Floating: Although it looks like land ice, it actually floats on the ocean
+
+🌡 Climate
+Extremely cold
+Temperatures can drop far below freezing
+Winds are strong and weather changes quickly
+
+🧊 Importance
+Slows glaciers, maintains sea level stability
+Acts like a “door” holding back huge ice sheets
+
+🐧 Wildlife
+Emperor penguins 🐧
+Weddell seals
+Various sea birds
+
+🔬 Research Stations
+McMurdo Station (USA)
+Scott Base (NZ)
+
+🎨 Mini Facts
+One of the largest floating ice bodies on Earth
+Formed over thousands of years
+Visited by explorers like James Clark Ross
+Looks like an endless frozen white plain 😊🌍
+        </pre>
+
+        <pre>
+               <img src="images/ROSS ICE PIC1.jpg" width="300px" height="300px"><img src="images/ROSS ICE PIC2.jpg" width="300px" height="300px"></pre>
+
+        <pre>
+                                <video src="images/ROSS ICE VIDEO1.mp4" controls width="400px" height="300px"></video>
+                                <video src="images/ROSS ICE VIDEO2.mp4" controls width="400px" height="300px"></video>
+        </pre>
+
+<pre>
+               <img src="images/ROSS ICE PIC3.jpg" width="300px" height="300px"><img src="images/ROSS ICE PIC4.jpg" width="300px" height="300px">
+        </pre>
+
+        <footer>
+            <h2>Thank You For Visiting Our Travel Guide!</h2>
+            <p>We hope this guide has inspired you to explore the beautiful destinations of ROSS ICE SHELF. Safe travels!</p>
+        </footer>
+    </main>
+</body>
+</html>

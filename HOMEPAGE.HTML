@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WORLD TOUR</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background-image: url("https://getwallpapers.com/wallpaper/full/f/6/e/504999.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        color: white;
+    }
+
+    main {
+        backdrop-filter: blur(4px);
+        background: rgba(0, 0, 0, 0.45);
+        padding: 20px;
+    }
+
+    h1 marquee {
+        font-size: 26px;
+        color: #dff3ff;
+        text-shadow: 0 0 10px #8ed0ff;
+    }
+
+    hr {
+        border: none;
+        height: 2px;
+        background: linear-gradient(to right, #69c3ff, #ffffff, #69c3ff);
+        margin-bottom: 20px;
+    }
+
+    /* -------- IMAGE ROW -------- */
+    .image-row {
+        display: flex;
+        justify-content: center;
+        gap: 25px;
+        margin-top: 20px;
+        flex-wrap: wrap;
+    }
+
+    .image-row img {
+        width: 100%;
+        max-width: 350px;    /* Auto-responsive */
+        height: auto;
+        border-radius: 12px;
+        box-shadow: 0 0 18px rgba(255, 255, 255, 0.4);
+        transition: transform 0.3s, box-shadow 0.3s;
+        object-fit: cover;
+    }
+
+    .image-row img:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 22px rgba(255, 255, 255, 0.7);
+    }
+
+    /* -------- CAPTION -------- */
+    .caption {
+        text-align: center;
+        font-size: 18px;
+        margin-top: 10px;
+        color: #cfeaff;
+        font-weight: bold;
+    }
+
+    /* -------- HEADING -------- */
+    .heading {
+        font-size: 30px;
+        color: rgba(110, 188, 234, 0.9);
+        text-decoration: underline;
+        margin-top: 30px;
+        text-shadow: 0 0 8px #7ec7ff;
+    }
+
+    /* -------- INFO BOX -------- */
+    .info-box {
+        background: rgba(0, 0, 0, 0.5);
+        padding: 15px 20px;
+        margin-top: 15px;
+        border-left: 4px solid #79c7ff;
+        border-radius: 8px;
+        font-size: 17px;
+        line-height: 1.6;
+        white-space: pre-wrap;
+    }
+
+    /* =============== MEDIA QUERIES =============== */
+
+    /* Tablets */
+    @media (max-width: 992px) {
+        h1 marquee {
+            font-size: 22px;
+        }
+
+        .heading {
+            font-size: 26px;
+        }
+
+        .caption {
+            font-size: 16px;
+        }
+
+        .image-row img {
+            max-width: 300px;
+        }
+    }
+
+    /* Mobile Phones */
+    @media (max-width: 600px) {
+        h1 marquee {
+            font-size: 18px;
+        }
+
+        .heading {
+            font-size: 22px;
+            text-align: center;
+        }
+
+        .caption {
+            font-size: 15px;
+            padding: 0 10px;
+        }
+
+        .info-box {
+            font-size: 15px;
+        }
+
+        .image-row {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .image-row img {
+            max-width: 90%;
+        }
+    }
+
+</style>
+</head>
+<body>
+
+<main>
+    <hr>
+
+    <h1>
+        <marquee behavior="scroll" direction="left" scrollamount="6">
+            "WORLD TOUR & TRAVEL BOOKING" — (EXPLORE THE WORLD WITH US - "Your Travel Starts Here")
+        </marquee>
+    </h1>
+
+    <div class="image-row">
+
+<a href="continent-map.html">
+<img src="images/front globe pic.jpg" alt="GO TO MAP" /></a>
+<img src="images/CHTGPT.png" alt="IMAGE 2" />
+<a href="TRAVELBOOKING.HTML">
+<img src="images/7f51f1b4-b4ab-4ea8-975d-8e4ffb4d7592.png" alt="GO TO BOOKING" /></a>
+</div>
+
+    <div class="caption">
+        👆 CLICK on GLOBE to KNOW about WORLD ———— 👆 CLICK on IT for BOOKING
+    </div>
+
+    <h1 class="heading"><i><b>✨ Welcome to Your Ultimate World Tour & Travel Booking Experience ✨</b></i></h1>
+
+    <div class="info-box">
+<b>Discover the beauty of the world with a platform designed to inspire your journey.
+From breathtaking destinations to exclusive travel packages, we bring everything you need for a perfect trip—right at your fingertips.
+Explore top attractions, book comfortable stays, and plan unforgettable adventures with ease.
+With a smooth and user-friendly booking system, your dream vacation is just a click away.
+
+🌍 Travel the world. Create memories. Live the adventure.</b>
+    </div>
+</main>
+</body>
+</html>

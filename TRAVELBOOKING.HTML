@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Travel Booking</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-link {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: #ff9800;
+    padding: 10px 18px;
+    border-radius: 25px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+.home-link:hover {
+    background: #e68900;
+}
+
+.booking-box {
+    background: #ffffff;
+    padding: 30px;
+    width: 100%;
+    max-width: 430px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.booking-box h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.booking-box input,
+.booking-box select {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+.price-box {
+    background: #f7f7f7;
+    padding: 12px;
+    margin-top: 10px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.booking-box button {
+    width: 100%;
+    padding: 12px;
+    background: #ff9800;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.booking-box button:hover {
+    background: #e68900;
+}
+
+#confirmation {
+    display: none;
+    margin-top: 20px;
+    text-align: center;
+    color: green;
+    font-weight: bold;
+}
+</style>
+</head>
+
+<body>
+
+<a href="HOMEPAGE.HTML" class="home-link">🏠 Home</a>
+
+<div class="booking-box">
+    <h2>Travel Booking</h2>
+
+    <form id="bookingForm">
+        <input type="text" placeholder="Your Name" required>
+
+        <select id="destination" required>
+            <option value="">Select Destination</option>
+            <option value="India">India</option>
+            <option value="Thailand">Thailand</option>
+            <option value="Singapore">Singapore</option>
+            <option value="Indonesia">Indonesia</option>
+            <option value="Malaysia">Malaysia</option>
+            <option value="Cairo">Cairo</option>
+            <option value="Cape Town">Cape Town</option>
+            <option value="Marrakesh">Marrakesh</option>
+            <option value="Johannesburg">Johannesburg</option>
+            <option value="Antarctica">Antarctica</option>
+            <option value="Africa">Africa</option>
+            <option value="Australia">Australia</option>
+            <option value="North America">North America</option>
+            <option value="Canada & Mexico">Canada & Mexico</option>
+            <option value="California">California</option>
+            <option value="Argentina">Argentina</option>
+        </select>
+
+        <input type="date" required>
+
+        <input type="number" id="members" placeholder="Number of Members" min="1" required>
+
+        <div class="price-box">
+            Total Price: ₹ <span id="totalPrice">0</span>
+        </div>
+
+        <button type="submit">Book Now</button>
+    </form>
+
+    <div id="confirmation">
+        ✅ Booking confirmed! Our team will contact you soon.
+    </div>
+</div>
+
+<script>
+/* 🔑 SINGLE PRICE CONTROLLER (SAFE) */
+const pricePerPerson = {
+    "India": 5000,
+    "Thailand": 12000,
+    "Singapore": 18000,
+    "Indonesia": 15000,
+    "Malaysia": 14000,
+    "Cairo": 22000,
+    "Cape Town": 26000,
+    "Marrakesh": 24000,
+    "Johannesburg": 25000,
+    "Antarctica": 50000,
+    "Africa": 30000,
+    "Australia": 35000,
+    "North America": 40000,
+    "Canada & Mexico": 38000,
+    "California": 32000,
+    "Argentina": 28000
+};
+
+const destination = document.getElementById("destination");
+const members = document.getElementById("members");
+const totalPrice = document.getElementById("totalPrice");
+
+function calculatePrice() {
+    const dest = destination.value;
+    const mem = members.value;
+
+    if (dest && mem && pricePerPerson[dest]) {
+        totalPrice.textContent = pricePerPerson[dest] * mem;
+    } else {
+        totalPrice.textContent = 0;
+    }
+}
+
+destination.addEventListener("change", calculatePrice);
+members.addEventListener("input", calculatePrice);
+
+document.getElementById("bookingForm").addEventListener("submit", function(e){
+    e.preventDefault();
+    document.getElementById("confirmation").style.display = "block";
+    this.reset();
+    totalPrice.textContent = 0;
+});
+</script>
+
+</body>
+</html>

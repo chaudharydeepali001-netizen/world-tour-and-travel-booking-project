@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAP</title>
+
+<style>
+/* ------------ BASIC STYLING ------------ */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f0f0;
+}
+
+h1 {
+    margin: 20px 10px;
+    color: #333;
+    font-size: 28px;
+}
+
+/* ------------ SEARCH BOX ------------ */
+.search-container {
+    text-align: center;
+    margin: 15px 0;
+}
+
+#countrySearch {
+    width: 300px;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 2px solid #0099ff;
+    outline: none;
+}
+
+/* ------------ MAP CONTAINER ------------ */
+.map-container {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+}
+
+.map-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ------------ CARDS ------------ */
+.card {
+    position: absolute;
+    padding: 8px 12px;
+    background-color: rgba(83, 232, 57, 0.8);
+    border-radius: 10px;
+    border: 1px solid rgba(0,0,0,0.2);
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 16px;
+    transition: 0.2s;
+}
+
+/* Hover effect */
+.card:hover {
+    transform: scale(1.15);
+    background-color: rgba(78, 200, 47, 0.9);
+}
+
+/* ------------ DEFAULT POSITIONS (DESKTOP) ------------ */
+.home {top:5%; left: 0%; }
+.asia { top: 25%; left: 70%; }
+.europe { top: 20%; left: 60%; }
+.north-america { top: 20%; left: 15%; }
+.africa { top: 40%; left: 60%; }
+.south-america { top: 65%; left: 25%; }
+.australia { top: 70%; left: 85%; }
+.antarctica { top: 90%; left: 50%; }
+
+/* =======================================================
+   📱 MOBILE RESPONSIVE FIX
+==========================================================*/
+@media (max-width: 600px) {
+
+    h1 { font-size: 22px; }
+
+    .card {
+        font-size: 12px;
+        padding: 5px 8px;
+    }
+
+    .home { top: 4%; left: 2%; }
+    .asia { top: 28%; left: 65%; }
+    .europe { top: 22%; left: 55%; }
+    .north-america { top: 22%; left: 10%; }
+    .africa { top: 48%; left: 55%; }
+    .south-america { top: 68%; left: 23%; }
+    .australia { top: 72%; left: 80%; }
+    .antarctica { top: 92%; left: 45%; }
+
+}
+
+/* =======================================================
+   📱📱 EXTRA SMALL SCREEN
+==========================================================*/
+@media (max-width: 400px) {
+    .card {
+        font-size: 10px;
+        padding: 4px 6px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<h1>🌍 World Map 🌍</h1>
+
+<!-- 🔍 SEARCH BOX (added) -->
+<div class="search-container">
+    <input type="text" id="countrySearch" placeholder="Search Continents...">
+</div>
+
+<div class="map-container">
+    <img src="https://openclipart.org/download/229770/Remix-World-Continents-2015101200.svg" alt="World Map">
+
+    <a class="card country-card home" href="HOMEPAGE.HTML">|HOME|</a>
+    <a class="card country-card asia" href="C1-ASIA.html">🌏 ASIA</a>
+    <a class="card country-card europe" href="C2-EUROPE.html">EUROPE</a>
+    <a class="card country-card north-america" href="C3-NORTH AMERICA.html">🍁 NORTH AMERICA</a>
+    <a class="card country-card africa" href="C4-AFRICA.html">🌍 AFRICA</a>
+    <a class="card country-card south-america" href="C5-SOUTH AMERICA.html">🌎 SOUTH AMERICA</a>
+    <a class="card country-card australia" href="C6-AUSTRALIA.html">🦘 AUSTRALIA</a>
+    <a class="card country-card antarctica" href="C7-ANTARCTICA.html">❄ ANTARCTICA</a>
+</div>
+
+<!-- 🔍 SEARCH SCRIPT (added) -->
+<script>
+document.getElementById("countrySearch").addEventListener("keyup", function () {
+    let filter = this.value.toLowerCase();
+    let cards = document.getElementsByClassName("country-card");
+
+    for (let i = 0; i < cards.length; i++) {
+        let text = cards[i].innerText.toLowerCase();
+        cards[i].style.display = text.includes(filter) ? "" : "none";
+    }
+});
+</script>
+</body>
+</html>

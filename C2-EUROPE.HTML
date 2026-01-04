@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C2-EUROPE</title>
+    <style>
+        /* -------- Body Styling -------- */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-image: image-set("images/europe map1.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: #fff;
+        }
+
+        main {
+            background: rgba(0, 0, 0, 0.5); /* semi-transparent overlay */
+            min-height: 100vh;
+            padding: 30px 20px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 3em;
+            margin-bottom: 40px;
+            text-decoration: underline;
+        }
+
+        /* -------- Card Styling -------- */
+        .card {
+            width: 350px;
+            padding: 5px;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(162, 248, 229, 0.3);
+            background: #e859f5;
+            border: 1px solid rgba(0,0,0,0.08);
+            margin: 0 auto 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 10px;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+        }
+
+        /* -------- Europe Links Styling -------- */
+        .europe-links {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .europe-links a {
+            display: inline-block;
+            background: rgba(255,255,255,0.1);
+            padding: 15px 25px;
+            border-radius: 10px;
+            text-decoration: none;
+            color: #fff;
+            font-size: 1.5em;
+            font-weight: bold;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .europe-links a:hover {
+            background: rgba(190, 252, 108, 0.8);
+            transform: scale(1.05);
+        }
+
+        /* -------- Responsive Styling -------- */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2em;
+            }
+
+            .card {
+                width: 80%;
+            }
+
+            .europe-links a {
+                font-size: 1.2em;
+                padding: 12px 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8em;
+            }
+
+            .europe-links a {
+                font-size: 1em;
+                padding: 10px 15px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+        <h1>EUROPE</h1>
+
+        <div class="card">
+            <h2>
+                <a href="homepage.html">| HOME |</a><a href="continent-map.html">| WORLD MAP |</a>
+            </h2>
+        </div>
+
+        <div class="europe-links">
+            <a href="EUROPE1-NORTHERN EUROPE.HTML">NORTHERN EUROPE</a>
+            <a href="EUROPE2-ESTERN EUROPE.HTML">EASTERN EUROPE</a>
+            <a href="EUROPE3-CENTRAL EUROPE.HTML">CENTRAL EUROPE</a>
+            <a href="EUROPE4-WESTERN EUROPE.HTML">WESTERN EUROPE</a>
+            <a href="EUROPE5-SOUTHREN EUROPE.HTML">SOUTHERN EUROPE</a>
+        </div>
+    </main>
+</body>
+</html>
